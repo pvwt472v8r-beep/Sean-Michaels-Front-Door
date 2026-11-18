@@ -532,6 +532,8 @@ button:disabled { color: #596057; background: #e6e3d9; cursor: not-allowed; }
 
 .site-footer p { color: var(--muted); font-size: .8rem; }
 
+.site-footer .site-credit { margin-top: 1.5rem; }
+
 .site-footer .footer-title {
   margin-bottom: .5rem;
   color: var(--ink);
