@@ -206,6 +206,13 @@ button, input, select, textarea { font: inherit; }
   object-position: center top;
 }
 
+@media (min-width: 1024px) {
+  .hero-image {
+    /* The summit is 36% down the square image; keep sky above it on ultrawide screens. */
+    object-position: center max(48%, calc(6rem - 36vw));
+  }
+}
+
 .hero::before {
   content: "";
   z-index: -1;
