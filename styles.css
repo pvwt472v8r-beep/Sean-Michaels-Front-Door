@@ -1,3 +1,43 @@
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("asset/fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("asset/fonts/cormorant-garamond-latin-400-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url("asset/fonts/manrope-latin-400-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url("asset/fonts/manrope-latin-600-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url("asset/fonts/manrope-latin-700-normal.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
   --pine: #102d26;
@@ -9,8 +49,8 @@
   --ink: #19382e;
   --muted: #526158;
   --line: #dcd7ca;
-  --serif: Georgia, "Times New Roman", serif;
-  font-family: system-ui, sans-serif;
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-family: Manrope, system-ui, sans-serif;
   color: var(--ink);
   background: var(--ivory);
 }
@@ -87,18 +127,18 @@ button, input, select, textarea { font: inherit; }
 .brand { gap: .85rem; text-decoration: none; }
 
 .brand-mark {
-  flex: 0 0 36px;
-  width: 36px;
-  height: 44px;
+  flex: 0 0 39px;
+  width: 39px;
+  height: 46px;
   stroke: var(--gold);
-  stroke-width: 1.6;
+  stroke-width: 1.25;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 .brand strong {
   display: block;
-  font: 400 1.6rem/1.2 var(--serif);
+  font: 400 1.8rem/1.05 var(--serif);
 }
 
 .brand-period, .footer-title span { color: var(--gold); }
@@ -126,7 +166,7 @@ button, input, select, textarea { font: inherit; }
   border: 1px solid transparent;
   border-radius: 2px;
   font-size: .88rem;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.4;
   text-align: center;
   text-decoration: none;
@@ -138,10 +178,10 @@ button, input, select, textarea { font: inherit; }
 
 .button-gold {
   color: var(--pine);
-  background: linear-gradient(115deg, var(--champagne), var(--gold));
+  background: var(--champagne);
 }
 
-.button-gold:hover { background: var(--champagne); }
+.button-gold:hover { background: #f0dfbb; }
 .button-pine { color: var(--white); background: var(--pine); }
 .button-pine:not(:disabled):hover { background: var(--pine-soft); }
 
@@ -195,11 +235,11 @@ h1, h2, h3 {
 }
 
 h1 {
-  max-width: 15ch;
+  max-width: 17ch;
   margin-block: 1.15rem 1.35rem;
-  font-size: clamp(3rem, 7vw, 6rem);
-  line-height: 1.03;
-  letter-spacing: -.05em;
+  font-size: clamp(3.4rem, 7.5vw, 6.5rem);
+  line-height: .96;
+  letter-spacing: -.025em;
 }
 
 h1 em { color: var(--champagne); }
@@ -258,9 +298,9 @@ section[id] { scroll-margin-top: 1rem; }
 
 h2 {
   margin-top: .85rem;
-  font-size: clamp(2.15rem, 4vw, 3.6rem);
-  line-height: 1.12;
-  letter-spacing: -.04em;
+  font-size: clamp(2.5rem, 4.4vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -.025em;
 }
 
 .section-heading {
@@ -295,9 +335,9 @@ h2 {
 
 .pathway h3 {
   margin-block: 1.2rem .65rem;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  letter-spacing: -.025em;
+  font-size: 1.75rem;
+  line-height: 1.1;
+  letter-spacing: -.015em;
 }
 
 .pathway p { margin-bottom: 1.25rem; color: var(--muted); font-size: .94rem; }
@@ -309,7 +349,7 @@ h2 {
   width: 100%;
   margin-top: auto;
   font-size: .82rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .about { padding-top: 0; }
@@ -381,7 +421,7 @@ h2 {
 
 .credentials li { padding: .3rem .6rem; border: 1px solid var(--line); font-size: .74rem; }
 
-.dark-link { font-weight: 650; }
+.dark-link { font-weight: 600; }
 
 .social-section {
   padding-block: clamp(3rem, 6vw, 5rem);
@@ -449,7 +489,7 @@ fieldset {
 
 .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 
-label { display: block; margin-bottom: .35rem; font-size: .88rem; font-weight: 650; }
+label { display: block; margin-bottom: .35rem; font-size: .88rem; font-weight: 600; }
 
 label span { color: var(--muted); font-size: .76rem; font-weight: 400; }
 
@@ -504,7 +544,7 @@ button:disabled { color: #596057; background: #e6e3d9; cursor: not-allowed; }
 
 @media (max-width: 640px) {
   html {
-    --mobile-bar-space: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+    --mobile-bar-space: calc(4rem + env(safe-area-inset-bottom, 0px));
     scroll-padding-bottom: var(--mobile-bar-space);
   }
 
@@ -519,8 +559,8 @@ button:disabled { color: #596057; background: #e6e3d9; cursor: not-allowed; }
 
   .header-inner { min-height: 5rem; }
   .brand { gap: .5rem; }
-  .brand-mark { flex-basis: 27px; width: 27px; height: 35px; }
-  .brand strong { font-size: 1.2rem; }
+  .brand-mark { flex-basis: 30px; width: 30px; height: 36px; }
+  .brand strong { font-size: 1.45rem; }
   .brand-caption { font-size: .52rem; letter-spacing: .05em; }
   .main-nav .button { min-height: 44px; gap: .4rem; padding: .6rem .65rem; font-size: .76rem; }
 
@@ -532,9 +572,9 @@ button:disabled { color: #596057; background: #e6e3d9; cursor: not-allowed; }
       linear-gradient(0deg, #081d17ed, transparent 85%);
   }
 
-  .hero-content { padding-block: clamp(2.5rem, 9vw, 3.5rem) 2.5rem; }
+  .hero-content { padding-block: clamp(3rem, 11vw, 4rem) 3rem; }
 
-  h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  h1 { font-size: clamp(3rem, 11vw, 4.5rem); }
 
   .hero-copy { max-width: 36ch; font-size: 1rem; }
 
@@ -570,23 +610,16 @@ button:disabled { color: #596057; background: #e6e3d9; cursor: not-allowed; }
     z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: .75rem;
-    padding: .7rem max(1rem, env(safe-area-inset-right, 0px))
-      calc(.7rem + env(safe-area-inset-bottom, 0px))
+    justify-content: center;
+    padding: .5rem max(1rem, env(safe-area-inset-right, 0px))
+      calc(.5rem + env(safe-area-inset-bottom, 0px))
       max(1rem, env(safe-area-inset-left, 0px));
     border-top: 1px solid #c5a36566;
     color: var(--ivory);
     background: var(--pine);
   }
 
-  .mobile-contact > span { max-width: 14ch; font-size: .76rem; line-height: 1.4; }
-  .mobile-contact .button { min-height: 46px; gap: .5rem; font-size: .82rem; }
-}
-
-@media (max-width: 360px) {
-  .mobile-contact > span { display: none; }
-  .mobile-contact .button { width: 100%; }
+  .mobile-contact .button { width: 100%; min-height: 46px; gap: .5rem; font-size: .82rem; }
 }
 
 @media (max-height: 420px) and (max-width: 640px) {
